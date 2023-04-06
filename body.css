@@ -19,19 +19,4 @@ body {
     height: 500px;
 }
 
-main {
-    width: 100%;/*ancho del main*/
-    padding: 100px;/*espacio entre el main y el contenido*/
-    margin: auto;/*para que el main se vea centrado*/
-    margin-top: 100px;/*espacio entre el main y top*/
 
-}
-/*
-.marco{
-    width: 100%;
-    height: 100%;
-    background-color: antiquewhite;
-    margin-top: 61px;
-
-
-}*/
