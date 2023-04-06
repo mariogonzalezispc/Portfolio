@@ -3,7 +3,7 @@
     padding: 0;/*padding en 0*/
     box-sizing: border-box;/*para que no se vea el borde*/
     text-decoration: none;/*para que no se vea el texto*/
-    font-family: 'Roboto', sans-serif;/*fuente*/
+    font-family: 'Roboto', inconsolata;/*fuente*/
 }
 
 body {

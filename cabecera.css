@@ -10,8 +10,8 @@
 }
 
 .logo__img{
-    width: 90px;
-    height: 70px;
+    width: 15vh;
+    height: 11vh;
     margin-top: 0.4%;
     margin-left: 0.4%;
     line-height: 60px;
@@ -33,7 +33,7 @@
       font-size: 30px;
       font-weight: 600;
       margin-left: 15px;
-      line-height: 95px;
+      line-height: 30vh;
       width: max-content;/*no corta el titulo*/
       display: block;
       position: absolute;
