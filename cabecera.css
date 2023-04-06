@@ -17,6 +17,24 @@
     line-height: 60px;
     border-radius: 10%;
 }
+.nombre{
+    position: absolute;
+    width: 40vh;
+    height: 8vh;
+    margin-top: 0.5%;
+    margin-left: 10%;
+    line-height: 20px;
+    border-radius: 10%;  
+}
+.logo__prog{
+    position: absolute;
+    width: 9vh;
+    height: 5vh;
+    margin-top: 2.8%;
+    margin-left: 13%;
+    line-height: 60px;
+    border-radius: 10%;
+}
 .nav{
     display: flex; 
     margin-left: 0.5%;
