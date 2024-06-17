@@ -13,7 +13,7 @@ switch (name_boton) {
       // Code to execute if expression === value2
       break;
     case 'acerca':
-        alert("presionasteboton de acerca");
+        alert('presionasteboton de acerca');
         break;
       default:
       // Code to execute if no other case matches
