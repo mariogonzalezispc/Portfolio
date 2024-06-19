@@ -43,4 +43,5 @@ body {
     border-radius: 10px;
     text-align: justify;
     margin-top: 1px;
+    user-select: none;
 }

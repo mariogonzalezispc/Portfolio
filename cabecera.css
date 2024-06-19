@@ -83,6 +83,7 @@
   }
   .nav-menu-link:hover {
       color: white;
+      border-radius: 5px;
       background-color: #508fbd;
             transition: 0.3s;
   }
