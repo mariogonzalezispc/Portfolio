@@ -1,0 +1,178 @@
+:root {
+    --color_fondo_formulario: rgba(82, 78, 78, 0.9);
+    --color_borde_formulario: rgba(26, 24, 24, 0.7);
+    --color_fondo_inputs: transparent;
+    --color_borde_botones: #e8e8e8;
+    --radio_borde_botones: 10px;
+    --grosor_borde_botones: 1px;
+    --color_transparente: transparent;
+    --color_fondo_produccion: rgba(245, 245, 220, 1);
+    --color_fondo_botones: rgba(197, 197, 145, 1);
+    --color_borde_productos: #e0e0e0;
+    --color_fondo_productos: whitesmoke;
+}
+
+* {
+    margin: 0; /* margen en 0 */
+    padding: 0; /* padding en 0 */
+    box-sizing: border-box; /* para que no se vea el borde */
+    text-decoration: none; /* para que no se vea el texto */
+    font-family: 'Roboto', inconsolata; /* fuente */
+}
+
+
+body {
+    background-size: cover; /* la imagen de fondo abarca todo */
+    background-attachment: fixed; /* para que se vea la imagen de fondo sea adjunta */
+    background-position: center; /* imagen de fondo centrada */
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+html {
+    height: 100%;
+}
+body { min-height: 100vh; }
+
+
+.portafolio>* {
+    border: 1px solid transparent;
+    border-radius: 1px;
+    padding: 0px;
+    text-align: center;
+}
+
+.portafolio {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "cabecera"
+        "carrusel"
+        "productos"
+        "footer";
+    padding-top: 1px; 
+}
+
+.cabecera {
+    grid-area: cabecera;
+    background-color: orangered;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "div_nombre"
+        "div_nav"
+        "div_clima";
+    padding-top: 1px; 
+}
+
+.carrusel {
+    grid-area: carrusel;
+    background-color: violet;
+}
+
+.productos {
+    grid-area: productos;
+    background-color: coral;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: green;
+}
+
+.cabecera {
+    display: grid;
+    gap: 1px;
+    grid-template-areas:
+        "div_nombre"
+        "div_nav"
+        "div_clima";
+    padding-top: 1px; 
+}
+.div_nombre{
+    grid-area: div_nombre;
+    background-color: yellowgreen;
+    margin-top: 2%;
+}
+.div_nav{
+    grid-area: div_nav;
+    background-color: grey;
+    margin-top: 2%;
+}
+.div_clima{
+    grid-area: div_clima;
+    background-color: bisque;
+    margin-top: 2%;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .portafolio {
+        display: grid;
+        gap: 1px;
+        grid-template:
+            "cabecera   " 90px
+            "carrusel   " 140px
+            "productos  " 600px 
+            "footer     " 150px / 
+            auto;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .carrusel{
+        margin-top: 90px;
+    }
+    .portafolio {
+        display: grid;
+        gap: 1px;
+        grid-template:
+            "cabecera   cabecera    cabecera    cabecera    cabecera" 0px 
+            "carrusel   carrusel    carrusel    carrusel    carrusel" 180px 
+            "productos  productos   productos   productos   productos" 400px 
+            "footer     footer      footer      footer      footer" 150px / 
+            10%        20%          20%         20%         10%;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1400px) {
+    .carrusel{
+        margin-top: 90px;
+    }
+    .portafolio {
+        display: grid;
+        gap: 1px;
+        grid-template:
+            "cabecera   cabecera    cabecera    cabecera    cabecera" 80px 
+            "carrusel   carrusel    carrusel    carrusel    carrusel" 180px 
+            "productos  productos   productos   productos   productos" 100px 
+            "productos  productos   productos   productos   productos" 100px 
+            "productos  productos   productos   productos   productos" 100px 
+            "productos  productos   productos   productos   productos" 100px 
+            "productos  productos   productos   productos   productos" 100px 
+            "productos  productos   productos   productos   productos" 100px 
+            "productos  productos   productos   productos   productos" 100px 
+            "footer     footer      footer      footer      footer" 150px / 
+            20%        20%          20%         20%         19%;
+    }
+    .cabecera{
+        display: grid;
+        gap: 1px;
+        grid-template:
+            "div_nombre div_nav div_clima" 80px /
+            19%         60%     19%;
+        padding-top: 1px;
+    }
+}

@@ -13,27 +13,25 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    margin: 0; /* margen en 0 */
+    padding: 0; /* padding en 0 */
+    box-sizing: border-box; /* para que no se vea el borde */
+    text-decoration: none; /* para que no se vea el texto */
+    font-family: 'Roboto', inconsolata; /* fuente */
 }
 
 html {
     height: 100%;
 }
-
 body {
-    min-height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    padding: 0px;
-    height: 100%;
+    background-size: cover; /* la imagen de fondo abarca todo */
+    background-attachment: fixed; /* para que se vea la imagen de fondo sea adjunta */
+    background-position: center; /* imagen de fondo centrada */
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: chocolate;
 }
-
 .portafolio>* {
     border: 1px solid transparent;
     border-radius: 1px;
@@ -55,21 +53,7 @@ body {
 .cabecera {
     grid-area: cabecera;
     background-color: orangered;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90px;
-    z-index: 1000;
-    display: grid;
-    gap: 10px;
-    grid-template-areas:
-        "div_nombre"
-        "div_nav"
-        "div_clima";
-    padding-top: 1px; 
 }
-
 .carrusel {
     grid-area: carrusel;
     background-color: violet;
@@ -85,88 +69,91 @@ body {
     background-color: green;
 }
 
+
+.cabecera>* {
+    border: 1px solid transparent;
+    border-radius: 1px;
+    padding: 0px;
+    text-align: center;
+}
+
 .cabecera {
     display: grid;
-    gap: 1px;
+    gap: 10px;
     grid-template-areas:
-        "div_nombre"
-        "div_nav"
-        "div_clima";
-    padding-top: 1px; 
+        "section_nombre"
+        "section_nav"
+        "section_clima";
+    padding-top: 5px; 
 }
-.div_nombre{
-    grid-area: div_nombre;
+.section_nombre {
+    grid-area: section_nombre;
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center ;
+}
+.section_nav {
+    grid-area: section_nav;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center ;
+}
+.section_clima {
+    grid-area: section_clima;
     background-color: yellowgreen;
-    margin-top: 2%;
-}
-.div_nav{
-    grid-area: div_nav;
-    background-color: grey;
-    margin-top: 2%;
-}
-.div_clima{
-    grid-area: div_clima;
-    background-color: bisque;
-    margin-top: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center ;
+    
+
+
 }
 
 
-@media only screen and (max-width: 576px) {
-    .portafolio {
-        display: grid;
-        gap: 1px;
-        grid-template:
-            "cabecera   " 90px
-            "carrusel   " 140px
-            "productos  " 600px 
-            "footer     " 150px / 
-            auto;
-    }
-}
 
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-    .carrusel{
-        margin-top: 90px;
-    }
-    .portafolio {
-        display: grid;
-        gap: 1px;
-        grid-template:
-            "cabecera   cabecera    cabecera    cabecera    cabecera" 0px 
-            "carrusel   carrusel    carrusel    carrusel    carrusel" 180px 
-            "productos  productos   productos   productos   productos" 400px 
-            "footer     footer      footer      footer      footer" 150px / 
-            20%        20%          20%         20%         20%;
-    }
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
-    .carrusel{
-        margin-top: 90px;
-    }
+
     .portafolio {
         display: grid;
         gap: 1px;
         grid-template:
-            "cabecera   cabecera    cabecera    cabecera    cabecera" 0px 
-            "carrusel   carrusel    carrusel    carrusel    carrusel" 180px 
-            "productos  productos   productos   productos   productos" 100px 
-            "productos  productos   productos   productos   productos" 100px 
-            "productos  productos   productos   productos   productos" 100px 
-            "productos  productos   productos   productos   productos" 100px 
-            "productos  productos   productos   productos   productos" 100px 
-            "productos  productos   productos   productos   productos" 100px 
-            "productos  productos   productos   productos   productos" 100px 
-            "footer     footer      footer      footer      footer" 150px / 
-            20%        20%          20%         20%         20%;
+            "cabecera   cabecera    cabecera    cabecera    cabecera" 80px 
+            "carrusel   carrusel    carrusel    carrusel    carrusel" 1fr
+            "productos  productos   productos   productos   productos" repeat(8, 1fr)
+            "footer     footer      footer      footer      footer" 1fr / 
+            1fr         1fr         1fr         1fr         1fr; 
     }
     .cabecera{
         display: grid;
         gap: 1px;
         grid-template:
-            "div_nombre div_nav div_clima" 80px /
-            20%         60%     20%;
+            "section_nombre section_nav section_clima" 80px /
+            1fr             3fr         1fr; 
         padding-top: 1px;
     }
 }
