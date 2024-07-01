@@ -75,6 +75,7 @@ body {
     border-radius: 1px;
     padding: 0px;
     text-align: center;
+    height: 60px;
 }
 
 .cabecera {
@@ -89,52 +90,16 @@ body {
 .section_nombre {
     grid-area: section_nombre;
     background-color: yellow;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: auto;
-    text-align: center;
-    align-items: center;
-    justify-content: center ;
 }
 .section_nav {
     grid-area: section_nav;
     background-color: aqua;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: auto;
-    text-align: center;
-    align-items: center;
-    justify-content: center ;
 }
+
 .section_clima {
     grid-area: section_clima;
     background-color: yellowgreen;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: auto;
-    text-align: center;
-    align-items: center;
-    justify-content: center ;
-    
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
 
@@ -142,7 +107,7 @@ body {
         display: grid;
         gap: 1px;
         grid-template:
-            "cabecera   cabecera    cabecera    cabecera    cabecera" 80px 
+            "cabecera   cabecera    cabecera    cabecera    cabecera" 60px 
             "carrusel   carrusel    carrusel    carrusel    carrusel" 1fr
             "productos  productos   productos   productos   productos" repeat(8, 1fr)
             "footer     footer      footer      footer      footer" 1fr / 
@@ -152,8 +117,46 @@ body {
         display: grid;
         gap: 1px;
         grid-template:
-            "section_nombre section_nav section_clima" 80px /
+            "section_nombre section_nav section_clima" 60px /
             1fr             3fr         1fr; 
         padding-top: 1px;
     }
+    .section_nombre{
+    display: grid;
+    place-items: center;
+    min-height: 60px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center ;
+    }
+
+    .section_nav{
+    display: grid;
+        place-items: center;
+        min-height: 60px;
+        height: auto;
+            border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center ;
+    }
+    .section_clima{
+        display: grid;
+        place-items: center;
+        min-height: 60px;
+        height: auto;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center ;
+    }
+
 }
