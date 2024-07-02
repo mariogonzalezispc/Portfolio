@@ -1,179 +1,186 @@
 :root {
-    --color_fondo_formulario: rgba(82, 78, 78, 0.9);
-    --color_borde_formulario: rgba(26, 24, 24, 0.7);
-    --color_fondo_inputs: transparent;
-    --color_borde_botones: #e8e8e8;
-    --radio_borde_botones: 10px;
-    --grosor_borde_botones: 1px;
-    --color_transparente: transparent;
-    --color_fondo_produccion: rgba(245, 245, 220, 1);
-    --color_fondo_botones: rgba(197, 197, 145, 1);
-    --color_borde_productos: #e0e0e0;
-    --color_fondo_productos: whitesmoke;
+  --color_fondo_formulario: rgba(82, 78, 78, 0.9);
+  --color_borde_formulario: rgba(26, 24, 24, 0.7);
+  --color_fondo_inputs: transparent;
+  --color_borde_botones: #e8e8e8;
+  --radio_borde_botones: 10px;
+  --grosor_borde_botones: 1px;
+  --color_transparente: transparent;
+  --color_fondo_produccion: rgba(245, 245, 220, 1);
+  --color_fondo_botones: rgba(197, 197, 145, 1);
+  --color_borde_productos: #e0e0e0;
+  --color_fondo_productos: whitesmoke;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', inconsolata;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+  text-decoration: none;
+  font-family: "Roboto", inconsolata;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    background-color: chocolate;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: chocolate;
 }
 
-.portafolio>* {
-    border: 1px solid transparent;
-    border-radius: 1px;
-    padding: 0px 0px 0px 0px;
-    text-align: center;
+.portafolio > * {
+  border: 1px solid transparent;
+  border-radius: 1px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
 }
 
 .portafolio {
-    display: grid;
-    gap: 1px;
-    grid-template-areas:
-        "cabecera"
-        "carrusel"
-        "productos"
-        "footer";
+  display: grid;
+  gap: 1px;
+  grid-template-areas:
+    "header_conte"
+    "cabecera"
+    "carrusel"
+    "productos"
+    "footer";
 }
 
 .cabecera {
-    grid-area: cabecera;
-    background-color:  transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90px;
+  grid-area: cabecera;
+  background-color: transparent;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+}
 
+.header-conte {
+  grid-area: header-conte;
+  background-color: transparent;
 }
 
 .carrusel {
-    grid-area: carrusel;
-    background-color: violet;
-    margin-top: 2% ;
+  grid-area: carrusel;
+  background-color: violet;
+  margin-top: 2%;
 }
 
 .productos {
-    grid-area: productos;
-    background-color: coral;
+  grid-area: productos;
+  background-color: coral;
 }
 
 .footer {
-    grid-area: footer;
-    background-color: green;
+  grid-area: footer;
+  background-color: green;
 }
 
-.cabecera>* {
-    border: 1px solid transparent;
-    border-radius: 1px;
-    padding: 1px;
-    text-align: center;
+.header-conte > * {
+  border: 1px solid red;
+  border-radius: 1px;
+  padding: 1px;
 }
 
-.cabecera {
-    display: grid;
-    gap: 1px;
-    grid-template-areas:
-        "section_nombre"
-        "section_nav"
-        "section_clima";
-    padding-top: 1px; 
-}
-.section_nombre{
-    grid-area: section_nombre;
-    background-color: transparent;
-}
-.section_nav{
-    grid-area: section_nav;
-    background-color: grey;
-}
-.section_clima{
-    grid-area: section_clima;
-    background-color: bisque;
-}
+.header-conte {
+  display: grid;
+  gap: 1px;
+  grid-template-areas:
+    "section_nombre"
+    "section_nav"
+    "section_clima";
+    width: 99%;
 
-
-
+  padding-top: 1px 1px 1px 1px;
+  border: 1px solid red;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.section_nombre {
+  grid-area: section_nombre;
+  background-color: greenyellow;
+}
+.section_nav {
+  grid-area: section_nav;
+  background-color: grey;
+}
+.section_clima {
+  grid-area: section_clima;
+  background-color: bisque;
+}
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
+  .portafolio {
+    display: grid;
+    gap: 1px;
+    grid-template:
+      "cabecera   cabecera    cabecera    cabecera    cabecera" 10%
+      "carrusel   carrusel    carrusel    carrusel    carrusel" 25%
+      "productos  productos   productos   productos   productos" 10%
+      "productos  productos   productos   productos   productos" 10%
+      "productos  productos   productos   productos   productos" 10%
+      "productos  productos   productos   productos   productos" 10%
+      "productos  productos   productos   productos   productos" 10%
+      "productos  productos   productos   productos   productos" 10%
+      "productos  productos   productos   productos   productos" 10%
+      "productos  productos   productos   productos   productos" 10%
+      "footer     footer      footer      footer      footer" 30% /
+      1fr 1fr 1fr 1fr 1fr;
+  }
 
-    .portafolio {
-        display: grid;
-        gap: 1px;
-        grid-template:
-            "cabecera   cabecera    cabecera    cabecera    cabecera"  10%
-            "carrusel   carrusel    carrusel    carrusel    carrusel" 25%
-            "productos  productos   productos   productos   productos" 10% 
-            "productos  productos   productos   productos   productos" 10% 
-            "productos  productos   productos   productos   productos" 10% 
-            "productos  productos   productos   productos   productos" 10% 
-            "productos  productos   productos   productos   productos" 10% 
-            "productos  productos   productos   productos   productos" 10% 
-            "productos  productos   productos   productos   productos" 10% 
-            "productos  productos   productos   productos   productos" 10% 
-            "footer     footer      footer      footer      footer" 30% / 
-            1fr         1fr         1fr         1fr         1fr;
-    }
-    .cabecera {
-         display: grid;
-        gap: 5px;
-        grid-template:
-            "section_nombre section_nav section_clima" 1fr /
-            1fr             3fr         1fr;
-        }
+  .header-conte {
+    margin-top: 1px;
+    display: grid;
+    gap: 5px;
+    grid-template:
+      "section_nombre section_nav section_clima" 1fr /
+      1fr 3fr 1fr;
+  }
 
-        .section_nombre {
-            display: grid;
-            place-items: center;
-            border: 1px solid transparent;
-            border-radius: 5px;
-            padding: auto;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-family: 'Times New Roman', Times, serif;
-        }
-    
-        .section_nav {
-            display: grid;
-            place-items: center;
-            min-height: 60px;
-            max-height: 90px;
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: auto;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        .section_clima {
-            display: grid;
-            place-items: center;
-            min-height: 60px;
-            max-height: 90px;
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: auto;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
+  .section_nombre {
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+  }
 
+  .section_nav {
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section_clima {
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
