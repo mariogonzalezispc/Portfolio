@@ -17,7 +17,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Roboto", inconsolata;
+  font-family: 'Inconsolata', monospace;
 }
 
 html {
@@ -31,7 +31,8 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: chocolate;
+  background-color: rgba(238,238,238,1);
+  font-family: 'Inconsolata', monospace;
 }
 
 .portafolio > * {
@@ -54,7 +55,7 @@ body {
 
 .cabecera {
   grid-area: cabecera;
-  background-color: blue;
+  background-color: rgba(238,238,238,1);
   position: fixed;
   display: flex;
   top: 0;
@@ -87,7 +88,7 @@ body {
 }
 
 .header-conte > * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   border-radius: 1px;
   padding: 1px;
 }
@@ -101,27 +102,28 @@ body {
     "section_clima";
     width: 99%;
     height: 90%;
-
   padding-top: 1px 1px 1px 1px;
-  border: 1px solid red;
+  border: 2px solid whitesmoke;
   border-radius: 5px;
   text-align: center;
   align-items: center;
   justify-content: center;
+  box-shadow: -1px -1px 1px #7b7b7b,
+  2px 2px 2px #ffffff;
 }
 .section_nombre {
   grid-area: section_nombre;
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 
 }
 .section_nav {
   grid-area: section_nav;
-  background-color: grey;
+  /* background-color: grey; */
 
 }
 .section_clima {
   grid-area: section_clima;
-  background-color: bisque;
+  /* background-color: bisque; */
 
 }
 
@@ -157,13 +159,15 @@ body {
     display: grid;
     height: 96%;
     place-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
     padding: auto;
+    color: #646464;
+    color: rgba(0, 0, 0, 0.60);
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
+    font-weight: 400;
     font-family: "Times New Roman", Times, serif;
   }
 
@@ -171,21 +175,52 @@ body {
     display: grid;
     height: 96%;
     place-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
     padding: auto;
     text-align: center;
     align-items: center;
     justify-content: center;
   }
+  .nav-menu{
+      display: flex;
+      width: 100%;
+      list-style: none;
+      color: #646464;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+  }
+
+  .nav-menu-item{
+    font-weight: 400;
+      font-size: 18px;
+      line-height: 40px;
+      color: #646464;
+      color: rgba(0, 0, 0, 0.60);
+      text-transform: uppercase;
+  }
+  .nav-menu-link{
+      padding: 8px 28px;
+      color: #646464;
+  }
+  .nav-menu-link:hover {
+      color: white;
+      border-radius: 5px;
+      background-color: #508fbd;
+            transition: 0.3s;
+  }
 
   .section_clima {
     display: grid;
     height: 96%;
     place-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
     padding: auto;
+    color: #646464;
+    color: rgba(0, 0, 0, 0.60);
+    font-weight: 400;
     text-align: center;
     align-items: center;
     justify-content: center;
