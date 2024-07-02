@@ -13,50 +13,59 @@
 }
 
 * {
-    margin: 0; /* margen en 0 */
-    padding: 0; /* padding en 0 */
-    box-sizing: border-box; /* para que no se vea el borde */
-    text-decoration: none; /* para que no se vea el texto */
-    font-family: 'Roboto', inconsolata; /* fuente */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', inconsolata;
 }
 
 html {
     height: 100%;
 }
+
 body {
-    background-size: cover; /* la imagen de fondo abarca todo */
-    background-attachment: fixed; /* para que se vea la imagen de fondo sea adjunta */
-    background-position: center; /* imagen de fondo centrada */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     padding: 0;
     width: 100%;
     min-height: 100vh;
     background-color: chocolate;
 }
+
 .portafolio>* {
     border: 1px solid transparent;
     border-radius: 1px;
-    padding: 0px;
+    padding: 0px 0px 0px 0px;
     text-align: center;
 }
 
 .portafolio {
     display: grid;
-    gap: 10px;
+    gap: 1px;
     grid-template-areas:
         "cabecera"
         "carrusel"
         "productos"
         "footer";
-    padding-top: 1px; 
 }
 
 .cabecera {
     grid-area: cabecera;
-    background-color: orangered;
+    background-color:  transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+
 }
+
 .carrusel {
     grid-area: carrusel;
     background-color: violet;
+    margin-top: 2% ;
 }
 
 .productos {
@@ -69,37 +78,37 @@ body {
     background-color: green;
 }
 
-
 .cabecera>* {
     border: 1px solid transparent;
     border-radius: 1px;
-    padding: 0px;
+    padding: 1px;
     text-align: center;
-    height: 60px;
 }
 
 .cabecera {
     display: grid;
-    gap: 10px;
+    gap: 1px;
     grid-template-areas:
         "section_nombre"
         "section_nav"
         "section_clima";
-    padding-top: 5px; 
+    padding-top: 1px; 
 }
-.section_nombre {
+.section_nombre{
     grid-area: section_nombre;
-    background-color: yellow;
+    background-color: transparent;
 }
-.section_nav {
+.section_nav{
     grid-area: section_nav;
-    background-color: aqua;
+    background-color: grey;
+}
+.section_clima{
+    grid-area: section_clima;
+    background-color: bisque;
 }
 
-.section_clima {
-    grid-area: section_clima;
-    background-color: yellowgreen;
-}
+
+
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
 
@@ -107,56 +116,64 @@ body {
         display: grid;
         gap: 1px;
         grid-template:
-            "cabecera   cabecera    cabecera    cabecera    cabecera" 60px 
-            "carrusel   carrusel    carrusel    carrusel    carrusel" 1fr
-            "productos  productos   productos   productos   productos" repeat(8, 1fr)
-            "footer     footer      footer      footer      footer" 1fr / 
-            1fr         1fr         1fr         1fr         1fr; 
+            "cabecera   cabecera    cabecera    cabecera    cabecera"  10%
+            "carrusel   carrusel    carrusel    carrusel    carrusel" 25%
+            "productos  productos   productos   productos   productos" 10% 
+            "productos  productos   productos   productos   productos" 10% 
+            "productos  productos   productos   productos   productos" 10% 
+            "productos  productos   productos   productos   productos" 10% 
+            "productos  productos   productos   productos   productos" 10% 
+            "productos  productos   productos   productos   productos" 10% 
+            "productos  productos   productos   productos   productos" 10% 
+            "productos  productos   productos   productos   productos" 10% 
+            "footer     footer      footer      footer      footer" 30% / 
+            1fr         1fr         1fr         1fr         1fr;
     }
-    .cabecera{
-        display: grid;
-        gap: 1px;
+    .cabecera {
+         display: grid;
+        gap: 5px;
         grid-template:
-            "section_nombre section_nav section_clima" 60px /
-            1fr             3fr         1fr; 
-        padding-top: 1px;
-    }
-    .section_nombre{
-    display: grid;
-    place-items: center;
-    min-height: 60px;
-    height: auto;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: auto;
-    text-align: center;
-    align-items: center;
-    justify-content: center ;
-    }
+            "section_nombre section_nav section_clima" 1fr /
+            1fr             3fr         1fr;
+        }
 
-    .section_nav{
-    display: grid;
-        place-items: center;
-        min-height: 60px;
-        height: auto;
+        .section_nombre {
+            display: grid;
+            place-items: center;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            padding: auto;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    
+        .section_nav {
+            display: grid;
+            place-items: center;
+            min-height: 60px;
+            max-height: 90px;
             border: 1px solid black;
-    border-radius: 5px;
-    padding: auto;
-    text-align: center;
-    align-items: center;
-    justify-content: center ;
-    }
-    .section_clima{
-        display: grid;
-        place-items: center;
-        min-height: 60px;
-        height: auto;
-        border: 1px solid black;
-        border-radius: 5px;
-        padding: auto;
-        text-align: center;
-        align-items: center;
-        justify-content: center ;
-    }
+            border-radius: 5px;
+            padding: auto;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .section_clima {
+            display: grid;
+            place-items: center;
+            min-height: 60px;
+            max-height: 90px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: auto;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
 
 }
