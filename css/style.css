@@ -31,7 +31,7 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(238,238,238,1);
+  background-color: rgba(189, 224, 136, 0.3);
   font-family: 'Inconsolata', monospace;
 }
 
@@ -48,14 +48,13 @@ body {
   grid-template-areas:
     "header_conte"
     "cabecera"
-    "carrusel"
     "productos"
     "footer";
 }
 
 .cabecera {
   grid-area: cabecera;
-  background-color: rgba(238,238,238,1);
+  background-color: rgba(189, 224, 136, 0.5);
   position: fixed;
   display: flex;
   top: 0;
@@ -71,20 +70,17 @@ body {
   background-color: transparent;
 }
 
-.carrusel {
-  grid-area: carrusel;
-  background-color: violet;
-margin-top: 2%;
-}
-
 .productos {
   grid-area: productos;
-  background-color: coral;
+  /*background-color: coral;*/
+  margin-top: 1.1%;
+  border: 1px solid red;
 }
 
 .footer {
   grid-area: footer;
-  background-color: green;
+  /*background-color: green;*/
+  border: 1px solid red;
 }
 
 .header-conte > * {
@@ -103,13 +99,11 @@ margin-top: 2%;
     width: 99%;
     height: 90%;
   padding-top: 1px 1px 1px 1px;
-  border: 2px solid whitesmoke;
+  border: 1px solid whitesmoke;
   border-radius: 5px;
   text-align: center;
   align-items: center;
   justify-content: center;
-  box-shadow: -1px -1px 1px #7b7b7b,
-  2px 2px 2px #ffffff;
 }
 .section_nombre {
   grid-area: section_nombre;
@@ -127,13 +121,12 @@ margin-top: 2%;
 
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1400px) {
+@media only screen and (min-width: 569px) and (max-width: 1400px) {
   .portafolio {
     display: grid;
     gap: 1px;
     grid-template:
       "cabecera   cabecera    cabecera    cabecera    cabecera" 10%
-      "carrusel   carrusel    carrusel    carrusel    carrusel" 25%
       "productos  productos   productos   productos   productos" 10%
       "productos  productos   productos   productos   productos" 10%
       "productos  productos   productos   productos   productos" 10%
@@ -154,78 +147,83 @@ margin-top: 2%;
       "section_nombre section_nav section_clima" 1fr /
       1fr 3fr 1fr;
   }
-
-  .section_nombre {
-    display: grid;
-    height: 85%;
-    place-items: center;
-    border: 1px solid black; 
-    border-radius: 5px;
-    padding: 0, 0, 0, 0;
-    color: #646464;
-    color: rgba(0, 0, 0, 0.60);
-    text-align: center;
+  
+  .section_nombre, .section_nav, .section_clima {
+    display: flex;
+    height: 100%;
     align-items: center;
     justify-content: center;
-    font-weight: 400;
-    font-family: "Times New Roman", Times, serif;
-  }
-
-  .section_nav {
-    display: grid;
-    height: 86%;
-    place-items: center;
-    border: 1px solid black; 
+    /*border: 1px solid black; */
     border-radius: 5px;
-    padding: auto;
+    padding: 0;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
   }
-
-  .nav-menu{
-      display: flex;
-      width: 100%;
-      list-style: none;
-      color: #646464;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
-      justify-content: space-around;
-  }
-
-  .nav-menu-item{
-    font-weight: 400;
-      font-size: 18px;
-      line-height: 40px;
-      /*color: #646464;
-      color: rgba(0, 0, 0, 0.60);*/
-      text-transform: uppercase;
-  }
-  .nav-menu-link{
-    padding: 10px 20px;
-      color: #646464;
-      text-decoration: none;
-  }
-  .nav-menu-link:hover {
-      color: white;
-      border-radius: 5px;
-      background-color: #508fbd;
-            transition: 0.3s;
-  }
-
   .section_clima {
-    display: grid;
-    height: 86%;
-    place-items: center;
-    border: 1px solid black; 
-    border-radius: 5px;
-    padding: auto;
-    color: #646464;
-    color: rgba(0, 0, 0, 0.60);
-    font-weight: 400;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    /*border: 1px solid black;*/
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 1em;
+  }
+  
+  
+  .section_nombre {
+    flex-direction: column;
+  }
+  
+  .section_nombre > h1, .section_nombre > h3 {
+    font-size: 1em;
+    max-width: 90%;
+    color: rgba(100, 100, 100, 0.9);
+  }
+  
+  .nav-menu {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    color: #646464;
+    text-decoration: none;
+    font-size: 1em;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0; 
+    margin: 0; 
+  }
+  
+  .nav-menu-item {
+    max-width: 90%;
+    font-size: 1.1em;
+    padding: 0.15em;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+  
+  .nav-menu-link {
+    padding: 0.5em;
+    color: rgba(100, 100, 100, 0.8);
+    text-decoration: none;
+  }
+  
+  .nav-menu-link:hover {
+    color: rgba(100, 100, 100, 1);
+    border-radius: 5px;
+    background-color: #508fbd;
+    transition: 0.3s;
+    border: 1px solid rgba(189, 224, 136, 1);
+    background-color: rgba(212,234, 177, 0.5);
+    box-shadow: 2px 2px 2px #7b7b7b,
+                -1px -1px 2px #ffffff;
+  }
+  
+  .section_clima {
+    font-size: 0.8em;
   }
 }
