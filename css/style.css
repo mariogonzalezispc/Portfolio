@@ -68,12 +68,16 @@ body {
 .header-conte {
   grid-area: header-conte;
   background-color: transparent;
+  /*background-color: brown;*/
+  border: 1px solid blueviolet;
+
+
 }
 
 .productos {
   grid-area: productos;
   /*background-color: coral;*/
-  margin-top: 1.1%;
+  margin-top: 3%;
   border: 1px solid red;
 }
 
